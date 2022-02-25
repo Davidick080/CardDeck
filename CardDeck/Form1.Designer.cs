@@ -60,6 +60,7 @@ namespace CardDeck
             // dealButton
             // 
             this.dealButton.BackColor = System.Drawing.Color.GreenYellow;
+            this.dealButton.Enabled = false;
             this.dealButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.dealButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dealButton.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,6 +98,7 @@ namespace CardDeck
             // collectButton
             // 
             this.collectButton.BackColor = System.Drawing.Color.GreenYellow;
+            this.collectButton.Enabled = false;
             this.collectButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.collectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.collectButton.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,6 +121,7 @@ namespace CardDeck
             this.dealerLabel.Size = new System.Drawing.Size(114, 19);
             this.dealerLabel.TabIndex = 9;
             this.dealerLabel.Text = "Dealer Cards:";
+            this.dealerLabel.Click += new System.EventHandler(this.dealerLabel_Click);
             // 
             // playerLabel
             // 
@@ -135,7 +138,7 @@ namespace CardDeck
             // 
             this.availableBox.Controls.Add(this.outputLabel);
             this.availableBox.ForeColor = System.Drawing.Color.White;
-            this.availableBox.Location = new System.Drawing.Point(12, 185);
+            this.availableBox.Location = new System.Drawing.Point(12, 186);
             this.availableBox.Name = "availableBox";
             this.availableBox.Size = new System.Drawing.Size(457, 118);
             this.availableBox.TabIndex = 12;
@@ -170,6 +173,7 @@ namespace CardDeck
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deck of Cards";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.availableBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
